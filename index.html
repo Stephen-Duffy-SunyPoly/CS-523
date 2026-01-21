@@ -26,14 +26,47 @@
                 padding-bottom: 1%;
                 font-size:500%;
             }
+            a:link{
+                color:#00D0FF;
+                text-decoration: none;
+            }
+            a:visited{color:#00D0FF;}
+
+            .outer{
+                padding:2em;
+                display:flex;
+                justify-content: center;
+            }
+
+            .inner{
+                padding:1em;
+                background-color: rgba(0, 151, 168, 0.34);
+            }
+
+            .homebutton{
+                padding:1em;
+                background-color: rgba(0, 89, 255, 0.34);
+                font-size:4em;
+                font-weight: bold;
+
+            }
+
+            .homebutton:hover{
+                background-color: #00b2ff;
+            }
         </style>
     </head>
 
     <body>
-    <a href="homework.html">homework page</a>
-    <!--    fun body here-->
     <div id="title">
         <h1 class="font">Stephen Duffy <br> CS523 Home Page</h1>
+    </div>
+    <div class="outer">
+        <div class="inner">
+            <a href="homework.html">
+                <div class="homebutton font">Homework Page</div>
+            </a>
+        </div>
     </div>
     </body>
 </html>

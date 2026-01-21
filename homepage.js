@@ -8,6 +8,8 @@ let numberOfSlices = 75
 let logoSlices = []
 let sliceWidth
 let sliceOffset = []
+let counter = 0;
+let opass = 0;
 
 function setup(){
     document.body.insertBefore(document.body.lastChild,document.body.firstChild);//make the canvas the first thing in the doc
@@ -25,7 +27,6 @@ function setup(){
     lastSLice.blend(logoImage,numberOfSlices*sliceWidth,0,logoImage.width-numberOfSlices*sliceWidth,logoImage.height,0,0,logoImage.width-numberOfSlices*sliceWidth,lastSLice.height,REPLACE);
     logoSlices.push(lastSLice);
     sliceOffset.push(500+10*numberOfSlices)
-
 }
 
 function draw(){
@@ -40,6 +41,23 @@ function draw(){
             sliceOffset[i]-=5
         }
     }
+
+    //arrows
+    fill(120,120,120,opass*128)
+    strokeWeight(0)
+    let scale = (height/957)
+    arrow(width/16,height/5,scale)
+    arrow(width-width/16-150*scale,height/5,scale)
+
+    counter ++
+    if(counter >= 275 && opass < 0.7){
+        opass += 0.05
+    }
+}
+
+function arrow(x, y, scale){
+    rect(x,y,150*scale,400*scale)
+    triangle(x-50*scale,y+400*scale,x+200*scale,y+400*scale,x+75*scale,y+500*scale)
 }
 
 function mouseMoved() {

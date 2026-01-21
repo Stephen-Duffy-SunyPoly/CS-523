@@ -4,7 +4,7 @@ function preload(){
 }
 
 let logoImage;
-const numberOfSlices = 55
+let numberOfSlices = 75
 let logoSlices = []
 let sliceWidth
 let sliceOffset = []
@@ -14,6 +14,7 @@ function setup(){
     createCanvas(windowWidth-18, windowHeight);
     logoImage.resize(0,960 * (height/957))//resize the image to fit the screen size
     sliceWidth = int(logoImage.width/numberOfSlices)
+    numberOfSlices = int(logoImage.width/sliceWidth)
     for(let i = 0; i < numberOfSlices; i++){
         let slice = createImage(sliceWidth,logoImage.height)
         slice.blend(logoImage,i*sliceWidth,0,sliceWidth,logoImage.height,0,0,slice.width,slice.height,REPLACE);
@@ -44,7 +45,7 @@ function draw(){
 function mouseMoved() {
     // detect where the mouse is
     let topX = width/2-logoImage.width/2
-    if(mouseX >= topX && mouseX <= topX+logoImage.width){
+    if(mouseX >= topX && mouseX <= topX+logoImage.width && mouseY < height){
         let xpos = mouseX - topX;
         let index = Math.floor(xpos/sliceWidth);
         sliceOffset[index]+=70

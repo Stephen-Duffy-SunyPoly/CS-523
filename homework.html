@@ -3,8 +3,431 @@
 <head>
     <meta charset="UTF-8">
     <title>Stephen Duffy - CS523 Homework</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+        }
+        div#title{
+            height:auto;
+            background-color:#04ff0057;
+            margin-top:3px;
+            padding-bottom: 1%;
+            font-size:500%;
+        }
+        .font{
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        a:link{
+            color:#00D0FF;
+            font-weight: bold;
+        }
+        a:visited{color:#00D0FF;}
+
+        div.labels{
+            height: auto;
+            background-color: rgba(190, 11, 241, 0.34);
+            margin-top:1em;
+            margin-bottom:1em;
+            padding-bottom:1%;
+            font-size: 1.5em;
+        }
+
+        h1.labelTitle{
+            font-size:4em;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        /*Drop down stuff*/
+        .hwCheckBox{
+            display: none;
+        }
+
+        .hwCheckBox:checked ~ .workContent{
+            max-height: 40em;
+        }
+
+        .hwCheckBox:checked + label .dropArrow{
+            transform: rotate(90deg);
+        }
+        .workContent {
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            overflow: hidden;
+            background-color: #00e7ff30;
+        }
+        .workHeader{
+            background-color: rgba(1, 75, 135, 0.19);
+            padding: 0.5em;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            cursor: pointer;
+            user-select: none;
+        }
+        .dropArrow{
+            height: 4em;
+            transform: rotate(180deg);
+            transition: transform 0.2s ease-out;
+        }
+        .workContainer{
+            border-radius: 3em;
+            overflow: hidden;
+            margin-bottom: 2em;
+            margin-top: 1em;
+        }
+        /*End of drop down stuff*/
+        .title{
+            font-size:6em;
+            color: white;
+            font-family: sans-serif;
+        }
+        .description {
+            font-size: 3em;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function linkDrop(hwNumber){
+            document.getElementById("HW"+hwNumber+"Toggle").checked=true;
+        }
+
+        //for each drop down add 400 to the size
+        window.onload=function(){
+            genStars(800)
+        }
+
+        function genStars(amount){
+
+        }
+    </script>
 </head>
 <body>
+    <div id="title">
+        <h1 class="font">Stephen Duffy <br> CS523 <br> Homework Page</h1>
+    </div>
+
+    <div class="font labels">
+        <h1 class="labelTitle">Labels</h1>
+        <a href="#HW1" onclick="linkDrop(1)">LABEL: HW1</a><br>
+        <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2</a><br>
+        <a href="#HW3" onclick="linkDrop(3)">LABEL: HW3</a><br>
+        <a href="#HW4" onclick="linkDrop(4)">LABEL: HW4</a><br>
+        <a href="#HW5" onclick="linkDrop(5)">LABEL: HW5</a><br>
+        <a href="#HW6" onclick="linkDrop(6)">LABEL: HW6</a><br>
+        <a href="#HW7" onclick="linkDrop(7)">LABEL: HW7</a><br>
+        <a href="#HW8" onclick="linkDrop(8)">LABEL: HW8</a><br>
+        <a href="#HW9" onclick="linkDrop(9)">LABEL: HW9</a><br>
+        <a href="#HW10" onclick="linkDrop(10)">LABEL: HW10</a><br>
+        <a href="#HW11" onclick="linkDrop(11)">LABEL: HW11</a><br>
+        <a href="#HW12" onclick="linkDrop(12)">LABEL: HW12</a><br>
+    </div>
+
+    <a id = HW1></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW1Toggle" class="hwCheckBox">
+        <label for="HW1Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 1</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 1 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW2></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW2Toggle" class="hwCheckBox">
+        <label for="HW2Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 2</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 2 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW3></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW3Toggle" class="hwCheckBox">
+        <label for="HW3Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 3</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 3 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW4></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW4Toggle" class="hwCheckBox">
+        <label for="HW4Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 4</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 4 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW5></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW5Toggle" class="hwCheckBox">
+        <label for="HW5Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 5</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 5 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW6></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW6Toggle" class="hwCheckBox">
+        <label for="HW6Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 6</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 6 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW7></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW7Toggle" class="hwCheckBox">
+        <label for="HW7Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 7</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 7 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW8></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW8Toggle" class="hwCheckBox">
+        <label for="HW8Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 8</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 8 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW9></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW9Toggle" class="hwCheckBox">
+        <label for="HW9Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 9</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 9 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW10></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW10Toggle" class="hwCheckBox">
+        <label for="HW10Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 10</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 10 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW11></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW11Toggle" class="hwCheckBox">
+        <label for="HW11Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 11</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 11 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW12></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW12Toggle" class="hwCheckBox">
+        <label for="HW12Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 12</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 12 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>

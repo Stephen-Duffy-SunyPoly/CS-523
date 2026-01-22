@@ -103,7 +103,7 @@
         }
 
         function genStars(amount){
-            let pageHeight = document.body.scrollHeight + 400 * 12
+            let pageHeight = document.body.scrollHeight + 400 * 13
             let starDiv = document.createElement("div");
             for(let i = 0; i < amount; i++){
                 let star = document.createElement("div");
@@ -127,18 +127,19 @@
 
     <div class="font labels">
         <h1 class="labelTitle">Labels</h1>
-        <a href="#HW1" onclick="linkDrop(1)">LABEL: HW1</a><br>
-        <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2</a><br>
-        <a href="#HW3" onclick="linkDrop(3)">LABEL: HW3</a><br>
-        <a href="#HW4" onclick="linkDrop(4)">LABEL: HW4</a><br>
-        <a href="#HW5" onclick="linkDrop(5)">LABEL: HW5</a><br>
-        <a href="#HW6" onclick="linkDrop(6)">LABEL: HW6</a><br>
-        <a href="#HW7" onclick="linkDrop(7)">LABEL: HW7</a><br>
-        <a href="#HW8" onclick="linkDrop(8)">LABEL: HW8</a><br>
-        <a href="#HW9" onclick="linkDrop(9)">LABEL: HW9</a><br>
-        <a href="#HW10" onclick="linkDrop(10)">LABEL: HW10</a><br>
-        <a href="#HW11" onclick="linkDrop(11)">LABEL: HW11</a><br>
-        <a href="#HW12" onclick="linkDrop(12)">LABEL: HW12</a><br>
+        <a href="#HW1" onclick="linkDrop(1)">LABEL: HW1_HomePage</a> <a href="#HW1" onclick="linkDrop(1)">LABEL: HW1_Project_Log</a><br>
+        <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2_Count_3s</a> <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2_Greet_Count</a> <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2_Jumpshot</a> <a href="#HW2" onclick="linkDrop(2)">LABEL: HW2_Project_Log</a><br>
+        <a href="#HW3" onclick="linkDrop(3)">LABEL: HW3_MPI_MatrixVector</a> <a href="#HW3" onclick="linkDrop(3)">LABEL: HW3_Project_Ideas</a><br>
+        <a href="#HW4" onclick="linkDrop(4)">LABEL: HW4_MPI_MatrixMatrix</a> <a href="#HW4" onclick="linkDrop(4)">LABEL: HW4_Project_Log</a><br>
+        <a href="#HW5" onclick="linkDrop(5)">LABEL: HW5_MPI_Tree_Broadcast</a> <a href="#HW5" onclick="linkDrop(5)">LABEL: HW5_MPI_Tree_Broadcast_Performance</a> <a href="#HW5" onclick="linkDrop(5)">LABEL: HW5_Project_Proposal</a><br>
+        <a href="#HW6" onclick="linkDrop(6)">LABEL: HW6_Pthreads_MatrixMatrix</a> <a href="#HW6" onclick="linkDrop(6)">LABEL: HW6_Project_Log_Updates</a><br>
+        <a href="#HW7" onclick="linkDrop(7)">LABEL: HW7_Project_Log_Updates</a><br>
+        <a href="#HW8" onclick="linkDrop(8)">LABEL: HW8_MPI_Pthreads</a> <a href="#HW8" onclick="linkDrop(8)">LABEL: HW8_Project_Log_Updates</a><br>
+        <a href="#HW9" onclick="linkDrop(9)">LABEL: HW9_Project_Log_Updates</a><br>
+        <a href="#HW10" onclick="linkDrop(10)">LABEL: HW10_Project_Log_Updates</a><br>
+        <a href="#HW11" onclick="linkDrop(11)">LABEL: HW11_Project_Log_Updates</a><br>
+        <a href="#HW12" onclick="linkDrop(12)">LABEL: HW12_GPU_Matrix_Multiply</a> <a href="#HW12" onclick="linkDrop(12)">LABEL: HW12_Project_Log_Update</a><br>
+        <a href="#HW13" onclick="linkDrop(13)">LABEL: HW12_Project_Log_Updates</a> <a href="#HW13" onclick="linkDrop(13)">LABEL: LABEL: HW12_Final_Project_Log</a><br>
     </div>
 
     <a id = HW1></a>
@@ -149,18 +150,18 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 1</h1>
+                <h1 class="title">HW 1 - CS523 Home Page</h1>
             </div>
         </label>
         <div class="workContent font">
             <div class="font">
                 <p class="description">
-                    Homework 1 general description
+                    Create a home page for this class and set up the project log
                 </p>
                 <p class="description">
                     Files And Links:<br>
-                    <a>Link 1</a><br>
-                    <a>Link 2</a><br>
+                    <a href="index.html">This classes home page</a><br>
+                    <a>Project Log</a><br>
                 </p>
             </div>
         </div>
@@ -174,7 +175,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 2</h1>
+                <h1 class="title">HW 2 - Pthreads - MPI Rank Order - Jumpshot Analysis</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -199,7 +200,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 3</h1>
+                <h1 class="title">HW 3 - MPI Matrix</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -224,7 +225,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 4</h1>
+                <h1 class="title">HW 4 - MPI Matrix Again</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -249,7 +250,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 5</h1>
+                <h1 class="title">HW 5 - MPI Tree Broadcast</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -274,7 +275,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 6</h1>
+                <h1 class="title">HW 6 - Pthread Matrices</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -299,7 +300,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 7</h1>
+                <h1 class="title">HW 7 - Project Work</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -324,7 +325,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 8</h1>
+                <h1 class="title">HW 8 - Parallel and Distributed Matrix Multiplication</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -349,7 +350,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 9</h1>
+                <h1 class="title">HW 9 - Project Work</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -374,7 +375,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 10</h1>
+                <h1 class="title">HW 10 - Project Work Again</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -399,7 +400,7 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 11</h1>
+                <h1 class="title">HW 11 - Yet More Project Work</h1>
             </div>
         </label>
         <div class="workContent font">
@@ -424,13 +425,38 @@
             <div class="workHeader font">
 
                 <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
-                <h1 class="title">HW 12</h1>
+                <h1 class="title">HW 12 - Matrix Multiplication With CUDA</h1>
             </div>
         </label>
         <div class="workContent font">
             <div class="font">
                 <p class="description">
                     Homework 12 general description
+                </p>
+                <p class="description">
+                    Files And Links:<br>
+                    <a>Link 1</a><br>
+                    <a>Link 2</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a id = HW13></a>
+    <div class="workContainer">
+        <input type="checkbox" id="HW13Toggle" class="hwCheckBox">
+        <label for="HW13Toggle">
+            <!--suppress HtmlUnknownTag -->
+            <div class="workHeader font">
+
+                <img class ="dropArrow" src="arrow.svg"  alt="Drop Down Arrow"/>
+                <h1 class="title">HW 13 - Project Completion</h1>
+            </div>
+        </label>
+        <div class="workContent font">
+            <div class="font">
+                <p class="description">
+                    Homework 13 general description
                 </p>
                 <p class="description">
                     Files And Links:<br>

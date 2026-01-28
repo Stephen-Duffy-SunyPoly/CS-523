@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Log</title>
+    <script src = "libraries/marked.umd.js"></script>
+    <script>
+        fetch("Project_log.md").then((res) => {
+            if(res.ok) {
+                res.text().then(text => {
+                    let html = document.getElementById("logBody");
+                    html.innerHTML = marked.parse(text);//lol no sanitization
+                })
+            }
+        })
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+        #logBody {
+            color: white;
+            font-family: sans-serif;
+            padding: 1em;
+            background-color: #00e7ff30;
+            border-radius: 1em;
+        }
+
+        div#title {
+            height: auto;
+            background-color: #04ff0057;
+            margin-top: 3px;
+            margin-bottom: 1em;
+            padding-bottom: 1%;
+            font-size: 4em;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            border-radius: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="title">
+    <h1 class="font">Stephen Duffy <br> CS523 <br> Project Log Page</h1>
+</div>
+
+<div id="logBody">
+Loading....<br> please wait
+</div>
+</body>
+</html>

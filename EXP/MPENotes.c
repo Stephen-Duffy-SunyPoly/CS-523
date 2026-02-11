@@ -84,7 +84,7 @@ int main( int argc, char *argv[] )
     //who made this and made theese horrible desisions
     for ( jj = 0; jj < 5; jj++ ) {
         MPE_Log_event( event1a, 0, NULL );//start event 1a the null here might be a comment string
-        /**Broadcasts a message from the process with rank "root" to all other processes of the communicator
+        /**Broadcasts a message from the process with rank "root" to all other processes of the communicator. The non root process will revive the data when they reach this funcion
          @param buffer A pointer to the message data
          @param count the number of entries in the buffer
          @param datatype The data type of the buffer (handle)

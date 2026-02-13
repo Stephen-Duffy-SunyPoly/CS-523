@@ -21,3 +21,5 @@
 - Started to work with particle life a bit
 - Got the project building as it on my system
 - started working on conversing the project to a more portable CMake project
+- Successfully concerted to a CMake project 
+notably: when compiling a debug binary the performance is significantly worse

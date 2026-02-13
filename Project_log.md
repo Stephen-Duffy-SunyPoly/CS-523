@@ -16,3 +16,8 @@
     - potential project programs: [raytracing.github.io](https://github.com/RayTracing/raytracing.github.io) based off books so potential for good documentaiton
   - Cellular automata
 - I found this particle simulation that looks really cool and I think I will do the project on this [particle-life](https://github.com/hunar4321/particle-life)
+
+## Week 3 (2/8/2026 - 2/14/2026)
+- Started to work with particle life a bit
+- Got the project building as it on my system
+- started working on conversing the project to a more portable CMake project

@@ -256,7 +256,7 @@ int main(int argc, char** argv) {
     MPI_Barrier( MPI_COMM_WORLD );//sync all threads
 
     DistributedMatrix matrix1("Enter matrix 1",matrix1Rows,matrix1Cols,perThreadRows1,processInfo);
-    DistributedMatrix matrix2("Enter matrix 2",matrix1Rows,matrix1Cols,perThreadRows2,processInfo);
+    DistributedMatrix matrix2("Enter matrix 2",matrix2Rows,matrix2Cols,perThreadRows2,processInfo);
 
     DistributedMatrix result = matrix1 * matrix2;
 

@@ -19,7 +19,10 @@
 
 ## Week 3 (2/8/2026 - 2/14/2026)
 - Started to work with particle life a bit
-- Got the project building as it on my system
-- started working on conversing the project to a more portable CMake project
-- Successfully concerted to a CMake project 
+- Got the project building as is on my system
+- started working on converting the project to a more portable CMake project
+- Successfully converted to a CMake project 
 notably: when compiling a debug binary the performance is significantly worse
+
+## Week 4 (2/15/2025 - 2/21/20206)
+- =

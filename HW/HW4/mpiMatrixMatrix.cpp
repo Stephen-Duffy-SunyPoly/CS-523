@@ -238,9 +238,10 @@ int main(int argc, char** argv) {
         if (matrix2Rows % processInfo.getNumProcesses() != 0) {
             cerr << "WARNING: the number of matrix rows is not evenly dividable by the number of processes" << endl;
         }
-        if (matrix2Cols % processInfo.getNumProcesses() != 0) {
-            cerr << "WARNING: the number of matrix cols is not evenly dividable by the number of processes" << endl;
+        if (matrix1Rows != matrix1Cols) {
+            cerr << "WARNING: Multiplication dimensions do not match!" << endl;
         }
+        //matrix 2 is not really distributed so the other size does not really matter
     }
 
     //send the data from the main thread and load it on the other threads

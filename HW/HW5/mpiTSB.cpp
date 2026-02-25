@@ -5,7 +5,7 @@
 #include <iostream>
 #include <mpi.h>
 #include "../HW3/mpi_infra.hpp"
-
+#include "Timer.hpp"
 
 using namespace std;
 
@@ -50,23 +50,95 @@ int treeStructuredBroadcast(int in, const ProcessInfo &processInfo) {
     return disVal;
 }
 
+int sequentailSend(int value, const ProcessInfo &processInfo) {
+    int vout = value;
+    if (processInfo.isMain()) {
+        //MPI buffer things
+        int mpiBufferSize =MPI_BSEND_OVERHEAD+sizeof(int);
+        char * mpiAttachedBuffer = static_cast<char *>(malloc(mpiBufferSize));
+        MPI_Buffer_attach(mpiAttachedBuffer, mpiBufferSize);
+        //sequentially send to all processes
+        for (int i=1;i<processInfo.getNumProcesses();i++) {
+            MPI_Bsend(&value,1,MPI_INT,i,0,MPI_COMM_WORLD);
+        }
+        //more buffer things;
+        MPI_Buffer_detach(mpiAttachedBuffer, &mpiBufferSize);
+        free(mpiAttachedBuffer);
+    } else {
+        MPI_Recv(&vout,1,MPI_INT,0,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+    }
+    return vout;
+}
+
 int main (int argc, char* argv[]) {
 
     MPI_Init(&argc, &argv);
+    // initMPE();
 
     const ProcessInfo processInfo;//get the general process info
+    Timer bcastTimer;
+    Timer tsbTimer;
+    Timer sequentialTimer;
 
     int value=0;
     if (processInfo.isMain()) {
         cout << "Enter value to distribute: ";
         cin >> value;
     }
-    MPI_Barrier(MPI_COMM_WORLD);
 
-    value = treeStructuredBroadcast(value,processInfo);
-    cout << processInfo.getRank() << " | " << value << endl;
+
+
+    //run method test with the timer
+    MPI_Barrier(MPI_COMM_WORLD);//WOW, this is the leased efficient sync system I have ever seen. it just spin waits under the hood taking up lots of CPU
+    // startMPE();
+    tsbTimer.startTimer();
+
+    treeStructuredBroadcast(value,processInfo);
 
     MPI_Barrier(MPI_COMM_WORLD);
+    tsbTimer.endTimer();
+    //test the bcast send method
+    bcastTimer.startTimer();
+    int bcastOutput=value;
+    MPI_Bcast(&bcastOutput,1,MPI_INT,0,MPI_COMM_WORLD);
+    MPI_Barrier(MPI_COMM_WORLD);
+    bcastTimer.endTimer();
+    sequentialTimer.startTimer();
+
+    sequentailSend(value,processInfo);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    sequentialTimer.endTimer();
+
+    //testing with MPI wtime
+    double bcastStartTime=MPI_Wtime();
+    MPI_Bcast(&bcastOutput,1,MPI_INT,0,MPI_COMM_WORLD);
+    MPI_Barrier(MPI_COMM_WORLD);
+    double bcastEndTime=MPI_Wtime();//also TSB start time
+    treeStructuredBroadcast(value,processInfo);
+    MPI_Barrier(MPI_COMM_WORLD);
+    double tsbEndTime=MPI_Wtime();//also sequential start
+    sequentailSend(value,processInfo);
+    MPI_Barrier(MPI_COMM_WORLD);
+    double sequentialEndTime=MPI_Wtime();
+
+
+
+    if (processInfo.isMain()) {
+        cout << "get Time of day timers:"<<endl;
+        cout << "Bcast timer:\t\t";
+        bcastTimer.printTimer();
+        cout << "TSB timer:\t\t";
+        tsbTimer.printTimer();
+        cout << "Sequential timer:\t";
+        sequentialTimer.printTimer();
+
+        cout << "W time timers:"<< endl;
+        cout << "bcast:\t\t" << (bcastEndTime-bcastStartTime) << "s" << endl;
+        cout << "TSB:\t\t"<< (tsbEndTime-bcastEndTime) << "s" << endl;
+        cout << "sequentail:\t"<< (sequentialEndTime-tsbEndTime) << "s" << endl;
+    }
+
     MPI_Finalize();
 
     return EXIT_SUCCESS;

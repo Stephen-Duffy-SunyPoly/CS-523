@@ -23,7 +23,8 @@ enum JSColor {
     GREEN,
     WHITE,
     PURPLE,
-    NAVY
+    NAVY,
+    YELLOW
 };
 
 //convert the color enum to the string representation
@@ -43,6 +44,8 @@ inline const char * jS_Color_to_str(const JSColor color) {
             return "purple";
         case NAVY:
             return "navy";
+        case YELLOW:
+            return "yellow";
     }
     return "";
 }

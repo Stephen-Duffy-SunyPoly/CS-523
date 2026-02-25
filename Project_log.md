@@ -37,3 +37,12 @@ notably: when compiling a debug binary the performance is significantly worse
     - Color manager thread: These threads will do what compute threads do as well as reduce the output for each of the compute threads it controls, and wait to be triggered by the main thread. These threads will be responsible for creating all the compute threads necessary to have 1 thread per color to check against.
   - The main render thread will bre respectables for creating 1 Color management thread for each color of particles.
   - In effect this will create a tree like structure of threads where the main thread creates the 4 manager threads and each manager creates 3 compute thread. Each computation frame will be triggered in the same manor.
+  
+## Week 5 (2/22/2026 - 2/28/2026)
+- p
+
+
+# Project Proposal
+- what am I modifiing
+- how am i modifiing
+- project link

@@ -1,6 +1,11 @@
 # CS 523 Project Log
 ### By: Stephen Duffy
 
+# Project Proposal
+- This project will be conducted on a project named particle life. This is a particle simulation program that simulates simple interactions between a few types of particles.
+- To make this project more efficient I will use threads to do physics computations in parallel reducing the time it takes to compute 1 physics frame
+- My work can be found at the following repository: [Link](https://github.com/Stephen-Duffy-SunyPoly/particle-life-parallel)
+
 ---
 
 ## Week 1 (1/25/2026 - 1/31/2026)
@@ -40,9 +45,3 @@ notably: when compiling a debug binary the performance is significantly worse
   
 ## Week 5 (2/22/2026 - 2/28/2026)
 - p
-
-
-# Project Proposal
-- what am I modifiing
-- how am i modifiing
-- project link

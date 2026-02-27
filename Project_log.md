@@ -44,4 +44,11 @@ notably: when compiling a debug binary the performance is significantly worse
   - In effect this will create a tree like structure of threads where the main thread creates the 4 manager threads and each manager creates 3 compute thread. Each computation frame will be triggered in the same manor.
   
 ## Week 5 (2/22/2026 - 2/28/2026)
-- p
+- worked on getting the code building on Linux:
+  - needed to system install the following libraries:
+    - libglu1-mesa-dev 
+    - freeglut3-dev 
+    - mesa-common-dev
+    - libfontconfig1-dev
+  - I ran into an issue where an instance variable in one of the libraries was not getting initialized and was for some reason null.
+  - This seg fault appears to be caused by a class whose this pointer spontaneously becomes null. After chasing this issue for a long time I have decided that Linux support is not viable at this time and as such I will not pursue it any longer

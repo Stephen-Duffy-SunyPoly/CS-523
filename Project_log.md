@@ -52,3 +52,8 @@ notably: when compiling a debug binary the performance is significantly worse
     - libfontconfig1-dev
   - I ran into an issue where an instance variable in one of the libraries was not getting initialized and was for some reason null.
   - This seg fault appears to be caused by a class whose this pointer spontaneously becomes null. After chasing this issue for a long time I have decided that Linux support is not viable at this time and as such I will not pursue it any longer
+
+## Week 6 (3/1/2026 - 3/7/20206)
+- Started implementing a threads based approach
+- preliminary testing show massive performance gains.
+- Some problems relating to simulation behavior and potentially bad pointers have popped up

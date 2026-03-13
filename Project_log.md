@@ -57,3 +57,6 @@ notably: when compiling a debug binary the performance is significantly worse
 - Started implementing a threads based approach
 - preliminary testing show massive performance gains.
 - Some problems relating to simulation behavior and potentially bad pointers have popped up
+
+## Week 7 (3/8/2026 - 3/14/2026)
+- Attempted to chase down a pointer issue

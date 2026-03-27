@@ -58,6 +58,9 @@ notably: when compiling a debug binary the performance is significantly worse
 - preliminary testing show massive performance gains.
 - Some problems relating to simulation behavior and potentially bad pointers have popped up
 
+## Week 7 (3/8/2026 - 3/14/2026)
+- Attempted to chase down a pointer issue
+
 ## Week 8 (3/22/2026 - 3/28/2026)
 - Resolved incorrect reference problem by switching to using regular pointers
 - Fixed  exploding velocity values by resetting total particle velocity on each physics frame

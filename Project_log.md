@@ -63,5 +63,9 @@ notably: when compiling a debug binary the performance is significantly worse
 
 ## Week 8 (3/22/2026 - 3/28/2026)
 - Resolved incorrect reference problem by switching to using regular pointers
-- Fixed  exploding velocity values by resetting total particle velocity on each physics frame
+- Fixed exploding velocity values by resetting total particle velocity on each physics frame
 - General optimization the code that gets run in parallel, while this had no noticeable effect on the code's performance in a release build, the performance in a debug build was considerably better.
+
+## Week 8 (3/29/2026 - 4/4/2026)
+- Added error handling
+- Rearranged parallel sync code for preference improvement 

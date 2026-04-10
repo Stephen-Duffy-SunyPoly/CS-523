@@ -68,4 +68,8 @@ notably: when compiling a debug binary the performance is significantly worse
 
 ## Week 8 (3/29/2026 - 4/4/2026)
 - Added error handling
-- Rearranged parallel sync code for preference improvement 
+- Rearranged parallel sync code for preference improvement
+
+## Week 9 (4/5/2026 - 4/11/2026)
+- Test Linux compiling on clang compiler - still gets nonsense segfaults
+- Merged development branch into main branch

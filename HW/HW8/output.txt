@@ -1,0 +1,7 @@
+enter matrix 1 size (row X col):
+enter matrix 2 size (row X col):
+Result:
+1 0 0 0
+0 1 0 0
+0 0 0 1
+0 0 1 0

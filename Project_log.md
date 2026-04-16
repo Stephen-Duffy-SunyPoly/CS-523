@@ -73,3 +73,11 @@ notably: when compiling a debug binary the performance is significantly worse
 ## Week 9 (4/5/2026 - 4/11/2026)
 - Test Linux compiling on clang compiler - still gets nonsense segfaults
 - Merged development branch into main branch
+
+## Week 10 (4/12/2026 - 4/18/2026)
+- Fixed a synchronization bug when changing the number of particles
+- Project is finished
+- Final measured performance:
+  - 960 of each particle type: ~229FPS physics: ~3ms    602.6%
+  - 1984 of each particle type: ~62FPS physics: ~14ms   620%
+  - 3968 of each particle type: ~15FPS physics: ~60ms   750%

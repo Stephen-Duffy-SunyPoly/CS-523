@@ -1,0 +1,24 @@
+Executing warmup rounds
+multiply with: 4 Blocks, 4096 threads
+Time Elapsed: 0s 574us
+multiply with: 8 Blocks, 2048 threads
+Time Elapsed: 0s 556us
+multiply with: 16 Blocks, 1024 threads
+Time Elapsed: 0s 917us
+multiply with: 32 Blocks, 512 threads
+Time Elapsed: 0s 891us
+multiply with: 64 Blocks, 256 threads
+Time Elapsed: 0s 903us
+multiply with: 128 Blocks, 128 threads
+Time Elapsed: 0s 884us
+multiply with: 256 Blocks, 64 threads
+Time Elapsed: 0s 907us
+multiply with: 512 Blocks, 32 threads
+Time Elapsed: 0s 881us
+multiply with: 1024 Blocks, 64 threads
+Time Elapsed: 0s 780us
+multiply with: 2048 Blocks, 8 threads
+Time Elapsed: 0s 895us
+multiply with: 4096 Blocks, 4 threads
+Time Elapsed: 0s 984us
+Done
